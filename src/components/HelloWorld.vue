@@ -7,7 +7,7 @@
 			@double="double = $event"
 		/>
 		<scores :players="players" @player-updated="onScoresChange" />
-		<div class="head-to-head-output" style="text-align: left">
+		<div class="head-to-head-output">
 			<div v-for="player in players" :key="player.name" class="head-to-head">
 				<strong>{{ player.name }}</strong>
 				<table>

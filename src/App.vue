@@ -1,8 +1,10 @@
 <template>
-	<nav>
-		<router-link to="/">Home</router-link> |
-		<router-link to="/about">About</router-link>
-	</nav>
+	<h1>settleup</h1>
+	<p>a simple payout calculator for equal value dot wagers</p>
+	<p>
+		enter the stakes for the value of each dot then enter the sum of each
+		players dots on the front and back
+	</p>
 	<router-view />
 </template>
 
@@ -11,7 +13,7 @@
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
+	// text-align: center;
 	color: #2c3e50;
 }
 

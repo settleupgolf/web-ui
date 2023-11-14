@@ -1,26 +1,37 @@
 <template>
 	<div class="stakes">
-		<label>stakes</label>
-		<input
-			:value="stakes"
-			type="number"
-			@change="$emit('stakes', parseInt($event.target.value, 10))"
-		/>
-		<label for="double">
-			Double on the back
-			<input
-				:checked="double"
-				name="double"
-				type="checkbox"
-				@change="$emit('double', $event.target.checked)"
+		<InputGroup class="stakes--value">
+			<InputGroupAddon>stakes</InputGroupAddon>
+			<InputNumber
+				:modelValue="stakes"
+				@input="$emit('stakes', $event.value)"
 			/>
-		</label>
+		</InputGroup>
+		<div class="stakes--double">
+			<Checkbox
+				:modelValue="double"
+				:binary="true"
+				@change="$emit('double', !double)"
+			/>
+			<label for="double"> Double on the back </label>
+		</div>
 	</div>
 </template>
 
 <script>
+import Checkbox from 'primevue/checkbox';
+import InputGroup from 'primevue/inputgroup';
+import InputGroupAddon from 'primevue/inputgroupaddon';
+import InputNumber from 'primevue/inputnumber';
+
 export default {
 	name: 'Stakes',
+	components: {
+		Checkbox,
+		InputGroup,
+		InputGroupAddon,
+		InputNumber,
+	},
 	props: {
 		double: {
 			type: Boolean,
@@ -33,3 +44,14 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+.stakes {
+	display: grid;
+	grid-template-columns: repeat(2, 0.5fr);
+	grid-gap: 10px;
+	align-items: center;
+
+	margin-bottom: 2rem;
+}
+</style>
