@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunksettleup_golf"]=self["webpackChunksettleup_golf"]||[]).push([[443],{9793:function(t,e,n){n.r(e),n.d(e,{default:function(){return i}});var u=n(3396);const s={class:"about"},a=(0,u._)("h1",null,"This is an about page",-1),r=[a];function l(t,e){return(0,u.wg)(),(0,u.iD)("div",s,r)}var c=n(89);const o={},f=(0,c.Z)(o,[["render",l]]);var i=f}}]);
+//# sourceMappingURL=about.f7221e34.js.map
