@@ -7,6 +7,18 @@
 			@double="double = $event"
 		/>
 		<scores :players="players" @player-updated="onScoresChange" />
+		<Button
+			@click="
+				players.push({
+					name: `Player ${players.length + 1}`,
+					front: 0,
+					back: 0,
+				})
+			"
+			style="margin-bottom: 1rem"
+		>
+			Add Player
+		</Button>
 		<div class="head-to-head-output">
 			<div v-for="player in players" :key="player.name" class="head-to-head">
 				<strong>{{ player.name }}</strong>
@@ -25,6 +37,8 @@
 </template>
 
 <script>
+import Button from 'primevue/button';
+
 import { calculate } from '@/lib/payout';
 
 import Scores from '@/components/Scores';
@@ -33,6 +47,7 @@ import Stakes from '@/components/Stakes';
 export default {
 	name: 'Home',
 	components: {
+		Button,
 		Scores,
 		Stakes,
 	},
