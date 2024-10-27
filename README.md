@@ -1,29 +1,9 @@
-# web-ui
+# settleupgolf/web-ui
 
-## Project setup
-```
-yarn install
-```
+[https://settleup.golf](https://settleup.golf)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+web app for the settleup golf platform
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## development
 
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+see `package.json` scripts
