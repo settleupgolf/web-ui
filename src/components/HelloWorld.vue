@@ -33,6 +33,7 @@
 				</table>
 			</div>
 		</div>
+		<Rules />
 	</div>
 </template>
 
@@ -43,11 +44,13 @@ import { calculate } from '@/lib/payout';
 
 import Scores from '@/components/Scores';
 import Stakes from '@/components/Stakes';
+import Rules from '@/components/Rules';
 
 export default {
 	name: 'Home',
 	components: {
 		Button,
+		Rules,
 		Scores,
 		Stakes,
 	},
